@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Product System</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script defer src="assets/script/script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Product System</h1>
+  </header>
+
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/upload.html">Upload</a></li>
+        <li><a href="pages/cart.html">Cart</a></li>
+        <li><a href="pages/contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h2>Available Products</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Add to Cart</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><img src="product1.jpg" alt="Product 1"></td>
+            <td>Sample Product A</td>
+            <td>5</td>
+            <td>$120</td>
+            <td><button class="add-to-cart" data-name="Sample Product A" data-price="120">Add</button></td>
+          </tr>
+          <tr>
+            <td><img src="product2.jpg" alt="Product 2"></td>
+            <td>Sample Product B</td>
+            <td>3</td>
+            <td>$150</td>
+            <td><button class="add-to-cart" data-name="Sample Product B" data-price="150">Add</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Product System</p>
+  </footer>
+</body>
+</html>
