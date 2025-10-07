@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Betsy</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/script/script.js"></script>
+</head>
+<body>
+  <header>
+    
+
+    <img src=\"assets/img/logo.png\" alt=\"Betsy Logo\" class=\"logo\">
+
+    <h1>Admin Panel</h1>
+  </header>
+
+  
+<div class="layout">
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/upload.html">Upload</a></li>
+      <li><a href="../pages/cart.html">Cart</a></li>
+      <li><a href="../pages/contact.html">Contact</a></li>
+      <li><a href="#">Settings</a></li>
+    </ul>
+  </nav>
+  <main>
+
+      <h2>Admin Login</h2>
+      <div id="login-section">
+        <label for="admin-password">Password:</label>
+        <input type="password" id="admin-password">
+        <button id="login-btn">Login</button>
+        <p id="login-message" style="color:red;"></p>
+      </div>
+
+      <div id="admin-tools" style="display:none;">
+        <h2>Manage Products</h2>
+        <table id="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    
+  </main>
+</div>
+
+
+  <footer>
+    <p>&copy; 2025 Betsy</p>
+  </footer>
+</body>
+</html>

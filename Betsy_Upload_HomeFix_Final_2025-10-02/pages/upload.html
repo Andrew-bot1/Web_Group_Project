@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload - Betsy</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script defer src="../assets/script/script.js"></script>
+</head>
+<body>
+  <header>
+    
+
+    <img src="../assets/img/logo.png" alt="Betsy Logo" class="logo">
+
+    <h1>Betsy</h1>
+  </header>
+
+  
+<div class="layout">
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../pages/upload.html">Upload</a></li>
+      <li><a href="../pages/cart.html">Cart</a></li>
+      <li><a href="../pages/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+    <main>
+      <section class="card" style="max-width:800px;margin:0 auto;">
+        <h2>Add a Product</h2>
+        <p>Fill this form and click <strong>Upload</strong> to add a new product to the home page.</p>
+        <form id="upload-form" class="form">
+          <div class="form-row">
+            <label>Name<span style="color:#c00">*</span></label>
+            <input type="text" id="u-name" required placeholder="e.g. Handmade Mug">
+          </div>
+          <div class="form-row">
+            <label>Price ($)</label>
+            <input type="number" id="u-price" min="0" step="0.01" placeholder="e.g. 19.99">
+          </div>
+          <div class="form-row">
+            <label>Quantity</label>
+            <input type="number" id="u-qty" min="0" step="1" placeholder="e.g. 5">
+          </div>
+          <div class="form-row">
+            <label>Category</label>
+            <input type="text" id="u-cat" placeholder="e.g. Home & Kitchen">
+          </div>
+          <div class="form-row">
+            <label>Image URL</label>
+            <input type="url" id="u-img-url" placeholder="https://example.com/image.jpg">
+          </div>
+          <div class="form-row">
+            <label>Or Upload Image File</label>
+            <input type="file" id="u-img-file" accept="image/*">
+            <small>If both URL and file are provided, the file will be used.</small>
+          </div>
+          <div class="form-row">
+            <label>Description</label>
+            <textarea id="u-desc" rows="3" placeholder="Short description"></textarea>
+          </div>
+          <div class="form-row">
+            <button type="submit" class="btn">Upload</button>
+            <span id="u-msg" style="margin-left:1rem;"></span>
+          </div>
+        </form>
+      </section>
+    </main>
+    
+</div>
+
+
+  <footer>
+    <p>&copy; 2025 Betsy</p>
+  </footer>
+</body>
+</html>

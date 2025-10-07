@@ -1,0 +1,240 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f9;
+  color: #333;
+}
+
+header {
+  background: #2c3e50;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav {
+  min-width: 200px;
+  background: #34495e;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+nav ul li:hover {
+	background-color: #C8DFF4;
+}
+
+nav ul li {
+  margin: 15px 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+img {
+  max-width: 100px;
+}
+
+button {
+  padding: 8px 12px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* === Global Enhancements === */
+
+main, .content, .container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  max-width: 900px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Navbar/logo styling */
+header, nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Main content area */
+main, .content, .container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 85%;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+header img.logo {
+  height: 50px;
+}
+
+/* Fill screen more visually */
+section, article {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+/* Button polish */
+button, .btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+/* Layout container */
+.layout {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 100%;
+}
+
+/* Vertical nav */
+nav {
+  width: 220px;
+  background-color: #222;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+/* ===== Minimal Fixes: header/nav gap and stable positioning ===== */
+header { margin-bottom: 0 !important; }
+nav { margin-top: 0 !important; position: static !important; height: auto !important; }
+
+/* === Product Grid & Detail === */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.98);
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform .15s ease, box-shadow .15s ease;
+  align-items: center;
+  padding: 0.75rem;
+  text-align: center;
+}
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* === Ensure sidebar extends to footer on product pages (and all pages) === */
+html, body { height: 100%; }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.app {
+  display: flex;
+  flex: 1;              /* fill remaining space between header and footer */
+  align-items: stretch; /* make children (nav/main) stretch equal height */
+}
+
+/* === Product detail UX update === */
+.product-detail-card {
+  display: grid;
+  grid-template-columns: minmax(380px, 520px) 1fr; /* bigger image column */
+  gap: 2rem;
+  align-items: start;
+}
+
+.product-detail-card .info {
+  justify-self: end;        /* push info all the way to the right */
+  width: 100%;
+  max-width: 720px;
+}
+
+.product-detail-card .info .qty { color: #2e7d32; } /* default in-stock color */
+.product-detail-card .info .qty.out { color: #b00020; font-weight: 700; } /* red for out-of-stock */
+
+/* === Product page: make image as wide as needed, with no constraining rules === */
+body.pages-product main {
+  width: 96% !important;
+  max-width: 1800px !important;   /* give room to expand */
+  margin: 0 auto !important;
+}
+
+/* Image itself: fill column width, no forced height, no cropping */
+body.pages-product .product-detail-card > img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  display: block !important;
+}
+
+/* Simple label under product thumbnails */
+.product-name { font-size: 0.95rem; margin-top: 0.4rem; color: #222; }
